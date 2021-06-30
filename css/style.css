@@ -1,0 +1,464 @@
+/* importing the google font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*, *::after, *::after{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+.sidebar{
+    width:5%;
+    z-index:5;
+    height:100vh;
+    position:fixed;
+    box-sizing:border-box;
+    padding:0.6rem 1.2rem;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    overflow:hidden;
+}
+.sidebar_wrapper{
+    position:relative;
+    height:inherit;
+    width:inherit;
+}
+
+.sidebar .restrorant_icon{
+    position:absolute;
+    top:10px;
+    left:-10px;
+    width:40px;
+}
+.sidebar .restrorant_icon img{
+    height:50px;
+}
+
+
+.nav_menu{
+    position:absolute;
+    top:40%;
+    left:-10px;
+    width:inherit;
+}
+.nav_menu .nav-item {
+    margin-bottom:40px;
+    width:inherit;
+    padding:10px;
+}
+.nav_menu .active{
+   border-left:2px solid black;
+}
+
+.nav_menu .nav-item i{
+    font-size:1.6rem;
+    margin-bottom:25px;
+    color:black;
+}
+a{
+    text-decoration: none;
+}
+
+.sidebar .setting{
+    position:absolute;
+    left:10%;
+    bottom:40px;
+    display:flex;
+    justify-content:center;
+}
+.sidebar .setting i{
+    font-size:1.6rem;
+    color:black;
+}
+
+#select_day{
+    padding:2px 5px;
+    border:none;
+}
+#select_day:focus{
+    border:none;
+}
+.main{
+    margin-left:5%
+}
+
+header{
+    font-family: 'Roboto Mono', monospace;
+    width:inherit;
+    padding:2rem 2rem;
+}
+
+.company_title{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+}
+.search_icon{
+    display:flex;
+    justify-content: flex-end;
+    align-items:flex-start;
+    margin-top:-8vh;
+}
+.search_icon i {
+    font-size:1.4rem;
+    color:lightgrey;
+}
+
+.product_shopping{
+    padding:0.4rem 1.2rem;
+}
+.product_shopping .table_detail{
+    margin-bottom:10px;
+    font-weight:600;
+    font-family: 'Poppins', sans-serif;
+}
+.food_category{
+    width:100%;
+}
+.food_main_catogory{
+    border:1px solid lightgrey;
+    width:inherit;
+    box-sizing:border-box;
+    display:flex;
+    justify-content:space-between;
+} 
+.food_main_catogory .active{
+    background-color:black;
+    color:white;
+}
+.food_category .catogory{
+    width:33.33%;
+    border:1px solid black;
+    text-align:center;
+    padding:10px 0;
+    font-weight:600;
+    font-size:1.125rem;
+}
+.food_category .food_sub_category{
+    margin-top:15px;
+    width:inherit;
+}
+.food_category .food_sub_category #food_select_option{
+    width:inherit;
+    padding:8px 8px;
+    font-weight:600;
+}
+.food_product_item{
+    margin-top:3rem;
+    /* border:1px solid yellow; */
+}
+.image_container{
+    display:flex;
+    justify-content: center;
+    width:45%;
+    float:left;
+    transition: 0.3s;
+}
+.image_container:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.image_container img{
+    width:inherit;
+}
+.food_product_item{
+    display:flex;
+    justify-content:space-between;
+}
+.food_product_detail{
+    padding:0.25rem 1rem;
+    width:75%;
+    float:right;
+    position:relative;
+}
+.food_product_detail .product_name{
+    font-family: 'Poppins', sans-serif;
+    font-weight:600;
+}
+.food_product_detail .product_quantity{
+    width:fit-content;
+    margin:15px 0;
+}
+.button_wrapper button{
+    margin-bottom:10px;
+}
+.product_price{
+    font-family:'Poppins', sans-serif;
+}
+.disabled{
+    opacity:0.4;
+}
+.product_quantity button{
+    border:1px solid lightgrey;
+    width:40px;
+    height:40px;
+    display: inline-block;
+    background-color:transparent;
+    font-weight:400;
+    font-size:1.3rem;
+}
+.billing_area{
+    padding:2rem 1rem;
+    /* position:fixed; */
+}
+
+.spit_check{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.spit_check .title_text h3{
+    font-family: 'Poppins', sans-serif;
+    font-weight:900;
+}
+
+.split h6{
+    display:inline-block;
+    font-weight:600;
+    margin-right:8px;
+    font-size:1.2rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 26px;
+}
+  
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+  
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+input:checked + .slider {
+    background-color: #000;
+}
+  
+input:focus + .slider {
+    box-shadow: 0 0 1px #000;
+}
+  
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+  
+.slider.round {
+    border-radius: 34px;
+}
+  
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.total_drink_price, .total_food_price, .total_dessert_price {
+    margin-top:1rem;
+    display:flex;
+    justify-content:space-between;
+    font-family: 'Poppins', sans-serif;
+}
+.drink_item_price, .food_item_price, .dessert_item_price{
+    display:flex;
+    justify-content:space-between;
+    margin:7px 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.text, .total_amount{
+    font-weight:bold;
+}
+.subtotal_container{
+    width:inherit;
+    margin-top:8rem;
+}
+.subtotal, .tax, .discount{
+    width:inherit;
+    margin-bottom:10px;
+    display:flex;
+    justify-content:space-between;
+}
+.pay_btn{
+    border:none;
+    border-radius:3px;
+    margin-top:10px;
+    width:100%;
+    padding:5px 8px;
+    background-color:green;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    color:white;
+    font-family: 'Poppins', sans-serif;
+    font-weight:500;
+    text-transform:uppercase;
+}
+.cancel-btn{
+    display:none;
+}
+.menu-btn{
+    display:none;
+}
+
+@media(max-width:700px){
+    .sidebar{
+        position:fixed;
+        top:0;
+        left:-100%;
+        height:100vh;
+        width:100%;
+        background:white;
+        display:block;
+        padding:6rem 0;
+        text-align:center;
+        transition: all 0.3s ease;
+        z-index:15;
+    }
+    .nav_menu .active{
+        border:none;
+     }
+    .nav_menu{
+        position:absolute;
+        top:40%;
+        left:0px;
+        width:inherit;
+    }
+    .nav_menu .nav-item {
+        margin-right:20px;
+    }
+    .nav_menu .nav-item i{
+        font-size:1.8rem;
+    }
+    .sidebar_wrapper{
+        position:relative;
+        margin-top:-15vh;
+        height:inherit;
+        width:inherit;
+    }
+
+    .sidebar_wrapper .cancel-btn{
+        position:absolute;
+        top:20px;
+        right:30px;
+        font-size:26px;
+    }
+    .restrorant_icon{
+        display:none;
+    }
+    .sidebar.active{
+        left:0%;
+    }
+    .search_icon{
+        display:none;
+    }    
+    .main{
+        margin-left:0%;
+    }
+    .icon {
+        display:block;
+    }
+    .icon.hide{
+        display:none;
+    }
+    header{
+        margin-top:-24%;
+        padding:0;
+        width:100%;
+        color:white;
+        padding:10px 0;
+        position:fixed;
+        z-index:10;
+        background-color:rgba(0,0,0.95)
+    }
+    .company_title{
+        display:flex;
+        justify-content:flex-start;
+        align-items:center;
+    }
+    .main{
+        margin:0;
+    }
+    .menu-btn{
+        display:block;
+        font-size:22px;
+        margin-right:20px;
+    }
+    .main-content{
+        position:relative;
+    }
+    .main-content .row{
+        margin-top:25%;
+    }
+}
+
+@media (max-width:868px){
+    .navbar{
+      padding:10px 0;
+    }
+  
+    .navbar .icon {
+      display:block;
+    }
+    .navbar .icon.hide{
+      display:none;
+    }
+    .navbar .menu-list{
+      position:fixed;
+      top:0;
+      left:-100%;
+      height:100vh;
+      width:100%;
+      background:white;
+      display:block;
+      padding:6rem 0;
+      text-align:center;
+      transition: all 0.3s ease;
+    }
+    .navbar .menu-list.active{
+      left:0%;
+    }
+    .menu-btn{
+      position:absolute;
+      right:10px;
+    }
+    .navbar .menu-list li{
+      font-size:45px;
+    }
+    .navbar .menu-list li a{
+      font-size:23px;
+    }
+    .navbar .logo a{
+      margin-left:5px;
+    }
+    .menu-list li a{
+      margin-left:0px;
+    }
+  }
